@@ -4,8 +4,8 @@
 
         loadData: function(filter) {
             return $.grep(this.clients, function(client) {
-                return (!filter.Name || client.Name.indexOf(filter.Name) > -1)
-                    && (filter.Age === undefined || client.Age === filter.Age)
+                return (!filter.ID || client.id.indexOf(filter.ID) > -1)
+                    && (filter.FullName === undefined || client.FullName === filter.FullName)
                     && (!filter.Address || client.Address.indexOf(filter.Address) > -1)
                     && (!filter.Country || client.Country === filter.Country)
                     && (filter.Married === undefined || client.Married === filter.Married);

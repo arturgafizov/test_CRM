@@ -10,6 +10,7 @@ admin_url = settings.ADMIN_URL
 urlpatterns = [
     path('', include('main.urls')),
     path('', include('admin_lte.urls')),
+    path('', include('crm.urls')),
     path(f'{admin_url}/', admin.site.urls),
     path(f'{admin_url}/defender/', include('defender.urls')),
     path('api/', include('rest_framework.urls')),

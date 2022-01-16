@@ -11,7 +11,7 @@ User = get_user_model()
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
     ordering = ('-id',)
-    list_display = ('email', 'full_name', 'is_active')
+    list_display = ('email', 'full_name', 'is_active', 'balance')
     search_fields = ('first_name', 'last_name', 'email')
 
     fieldsets = (
@@ -25,7 +25,7 @@ class CustomUserAdmin(UserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2'),
+            'fields': ('email', 'password1', 'password2', 'balance'),
         }),
     )
     readonly_fields = ('id',)
